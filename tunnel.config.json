@@ -1,0 +1,6 @@
+{
+  "provider": "ngrok",
+  "command": "ngrok",
+  "args": ["http", "{port}", "--url", "{publicUrl}", "--log", "stdout", "--log-format", "json"],
+  "publicUrl": "https://wreath-resale-scoundrel.ngrok-free.dev"
+}

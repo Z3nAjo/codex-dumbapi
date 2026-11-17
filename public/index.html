@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dummy API · Route studio</title>
+  <style>
+    :root{font:14px system-ui,sans-serif;color:#24343b;background:#f3f5f7}*{box-sizing:border-box}body{margin:0}header{background:#162b31;color:white;padding:19px max(20px,calc((100vw - 1080px)/2))}header small{font-size:10px;color:#a5d9cc;letter-spacing:1.8px}h1{font-size:25px;letter-spacing:-.6px;margin:4px 0}header p{font-size:12px;color:#c1d1d5;margin:0}main{max-width:1120px;margin:20px auto;padding:0 20px;display:grid;grid-template-columns:280px minmax(0,1fr);gap:16px;align-items:start}.card{min-width:0;background:white;border:1px solid #dde3e7;border-radius:10px;padding:18px;box-shadow:0 2px 8px #18303a04}h2{font-size:16px;margin:0 0 12px;letter-spacing:-.2px}button,input,select,textarea{font:inherit}button{cursor:pointer;border:1px solid #d1dce0;background:white;border-radius:6px;padding:7px 10px;color:inherit;font-size:12px;font-weight:550;min-height:32px}button:hover,.icon-button:hover{background:#edf5f3;border-color:#9bbcaf}button.primary{background:#146c58;color:white;border-color:#146c58}button.primary:hover{background:#105a49}button:disabled{cursor:default;opacity:.45}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #16866c;outline-offset:2px}label{display:block;font-weight:600;font-size:12px;margin:12px 0 6px}input,select,textarea{border:1px solid #cbd5dc;border-radius:6px;padding:8px 10px;width:100%;background:#fff;color:inherit;min-width:0}select{appearance:none;padding-right:32px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23566d74' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center}input:disabled{background:#f7f9fa;color:#62747c}textarea{display:block;font:13px/1.6 ui-monospace,monospace;min-height:230px;resize:vertical;tab-size:2}code{font-family:ui-monospace,monospace;font-size:12px}.hint{color:#6b7d85;font-size:11px;line-height:1.55;margin:9px 0}.hint code{font-size:10px;overflow-wrap:anywhere}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.row>div{min-width:0}.route{display:flex;align-items:center;text-align:left;width:100%;margin-top:7px;padding:10px;overflow-wrap:anywhere}.route code{font-size:12px;word-break:break-word}.route.selected{border-color:#16866c;background:#edf8f4}.badge{display:inline-block;font-size:9px;font-weight:750;letter-spacing:.2px;color:#146c58;background:#e3f3ed;border-radius:4px;padding:3px 5px;margin-right:7px;flex-shrink:0;vertical-align:middle}.actions{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:13px}#message{font-size:12px;margin-top:10px;white-space:pre-wrap}#message:empty,#log-message:empty{display:none}#log-message{font-size:12px}pre{background:#142a31;color:#d4f0e4;padding:13px;border-radius:7px;font:12px/1.6 ui-monospace,monospace;overflow:auto;max-height:280px;white-space:pre-wrap;overflow-wrap:anywhere}#delete{color:#aa3939}#endpoint{overflow-wrap:anywhere;margin:7px 0 12px}#form>.row label{margin-top:0}.editor{border:1px solid #cbd5dc;border-radius:7px;overflow:hidden}.editor:focus-within{border-color:#16866c}.editor-toolbar{height:34px;padding:3px 6px 3px 11px;background:#f7f9fa;border-bottom:1px solid #e4e9ec;display:flex;align-items:center;justify-content:space-between}.editor-toolbar>span{font:10px ui-monospace,monospace;color:#788990;letter-spacing:.6px}.editor-tools{display:flex;gap:3px}.icon-button{display:inline-flex;align-items:center;justify-content:center;width:30px;height:28px;min-height:28px;padding:5px;border:1px solid transparent;border-radius:5px;color:#526a72;background:transparent;text-decoration:none;cursor:pointer}.icon-button svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}.editor textarea{border:0;border-radius:0;padding:11px 12px;outline-offset:-3px}#test-params{margin-top:12px;padding:12px;background:#f7f9fa;border:1px solid #e4e9ec;border-radius:7px}#test-params h3{margin-top:0;font-size:13px!important}#test-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:6px 12px}#test-fields label{margin-top:3px}#test-fields .parameter-field{min-width:0}.log-toolbar{position:absolute;right:0;top:50%;transform:translateY(-50%);display:flex;align-items:center;justify-content:flex-end;gap:6px;width:116px;height:28px}.log-toolbar .hint{margin:0;white-space:nowrap;font-size:10px;overflow:hidden;text-overflow:ellipsis;min-width:0}#log-entries details>pre{margin:0 0 8px}#log-entries details{border-top:1px solid #edf0f2}#log-entries summary{position:relative;font-size:11px;padding:9px 124px 9px 0!important;color:#536c76;min-height:36px}#log-entries{max-height:360px;overflow:auto}#count{color:#829097;font-size:12px;font-weight:400}@media(max-width:760px){main{grid-template-columns:1fr;margin:14px auto;padding:0 12px;gap:12px}header{padding:16px 18px}.card{padding:14px}.actions{gap:6px}textarea{min-height:210px}}
+  </style>
+</head>
+<body>
+<header><small>LOCAL TO PUBLIC</small><h1>Dummy API</h1><p>Real endpoints. Exactly the JSON you choose.</p></header>
+<main>
+  <aside class="card"><div class="row"><h2 style="margin:0">Your routes <span id="count"></span></h2><button id="new">+ New</button></div><p class="hint">Each route is saved in its own JSON file.</p><div id="routes"></div><div style="border-top:1px solid #e4e9ec;padding-top:12px;margin-top:14px"><div class="row"><strong style="font-size:13px">Public tunnel</strong><span id="tunnel-state" class="badge">Stopped</span></div><p class="hint">Public base URL<br><code id="public-base">No tunnel configured</code></p><p class="hint">The admin panel is available locally. Start a tunnel to share your API.</p><div class="actions"><button id="tunnel-start" class="primary">Start tunnel</button><button id="tunnel-stop" disabled>Stop</button></div><p id="tunnel-message" class="hint" role="status"></p><details><summary style="font-size:12px;cursor:pointer">Tunnel settings</summary><fieldset id="tunnel-fields" style="border:0;padding:0;margin:0"><label for="tunnel-provider">Tool</label><select id="tunnel-provider"><option value="ngrok">ngrok</option><option value="cloudflared">Cloudflare Tunnel</option><option value="custom">Custom command</option></select><label for="tunnel-url">Public URL (optional)</label><input id="tunnel-url" type="url" placeholder="https://your-domain.example"><label for="tunnel-command">Executable</label><input id="tunnel-command" placeholder="ngrok"><label for="tunnel-args">Arguments (JSON array)</label><textarea id="tunnel-args" style="min-height:100px;font-size:11px" spellcheck="false"></textarea><p class="hint">Use {port}, {localUrl}, and {publicUrl}. Commands run directly without a shell. Keep the original Host header so the admin stays local.</p><button id="tunnel-save">Save settings</button></fieldset></details><details style="margin-top:9px"><summary style="font-size:11px;cursor:pointer">Tool output</summary><pre id="tunnel-output" style="font-size:10px;max-height:180px">Not started.</pre></details></div></aside>
+  <section class="card"><h2 id="title">Create a route</h2><form id="form"><div class="row"><div style="width:110px"><label for="method">Method</label><select id="method"><option>GET</option><option>POST</option><option>PUT</option><option>DELETE</option><option>ALL</option></select></div><div style="flex:1"><label for="name">Route name</label><input id="name" placeholder="e.g. users/{name}" required maxlength="240"></div></div><p id="endpoint" class="hint">/api/route_name</p><label for="response">Static JSON response</label><div class="editor"><div class="editor-toolbar"><span>JSON</span><div class="editor-tools"><button type="button" id="format" class="icon-button" title="Format JSON" aria-label="Format JSON"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4H6a2 2 0 0 0-2 2v3a3 3 0 0 1-2 3 3 3 0 0 1 2 3v3a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v3a3 3 0 0 0 2 3 3 3 0 0 0-2 3v3a2 2 0 0 1-2 2h-2M10 9h4m-4 6h4"/></svg></button><button type="button" id="copy-json" class="icon-button" title="Copy JSON" aria-label="Copy JSON"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg></button></div></div><textarea id="response" spellcheck="false" required>{
+  "message": "Hello, world!",
+  "success": true
+}</textarea></div><p class="hint">Use {name} in JSON strings to reuse a path parameter. Query parameters and request bodies are ignored.</p><div id="test-params" hidden><h3 style="font-size:15px;margin-bottom:0">Test parameters</h3><p class="hint">Values are strings and are only used by Test saved route.</p><div id="test-fields"></div></div><div class="actions"><button class="primary" type="submit">Save route</button><button type="button" id="test" disabled>Test saved route</button><button type="button" id="delete" hidden>Delete</button></div></form><div id="message" role="status" aria-live="polite"></div><pre id="result" hidden></pre></section>
+  <section class="card" style="grid-column:1/-1"><div class="row" style="flex-wrap:wrap"><h2 style="margin:0">Request logs <span id="log-state" class="badge">Paused</span></h2><div class="actions" style="margin:0"><button id="log-on" class="primary">Turn on logging</button><button id="log-pause" disabled>Pause</button><button id="log-toggle" aria-expanded="false">Show logs</button><button id="log-clear">Clean logs</button><a href="/admin/logs/download" class="icon-button" download title="Download logs" aria-label="Download logs"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 16v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"/></svg></a></div></div><p class="hint">API requests and returned responses are saved to data/requests.jsonl. Pausing keeps existing logs. Latest 100 shown; bodies are limited to 1 MB each.</p><p id="log-message" role="status"></p><div id="log-view" hidden><div id="log-entries"></div></div></section>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+let routes = [], selected = null;
+function message(text, error = false) { $('message').textContent = text; $('message').style.color = error ? '#aa3939' : '#146c58'; }
+async function request(url, options) { const res = await fetch(url, options); const data = await res.json(); if (!res.ok) throw new Error(data.error || 'Request failed'); return data; }
+function reset() { selected = null; $('name').disabled = false; $('form').reset(); $('title').textContent = 'Create a route'; $('delete').hidden = true; $('test').disabled = true; $('result').hidden = true; message(''); renderTestParams(null); render(); preview(); }
+function preview() { $('endpoint').textContent = '/api/' + ($('name').value || 'route_name'); }
+function select(route) { selected = route.name; $('name').value = route.name; $('name').disabled = true; $('method').value = route.method; $('response').value = JSON.stringify(route.response, null, 2); $('title').textContent = 'Edit route'; $('delete').hidden = false; $('test').disabled = false; $('result').hidden = true; message(''); renderTestParams(route); preview(); render(); }
+function renderTestParams(route) {
+  const previous = new Map([...$('test-fields').querySelectorAll('input')].map(input => [input.dataset.parameter, input.value]));
+  $('test-fields').replaceChildren();
+  const names = route ? [...route.name.matchAll(/\{([a-zA-Z_][a-zA-Z0-9_]*)\}/g)].map(match => match[1]) : [];
+  $('test-params').hidden = names.length === 0;
+  for (const [index, name] of names.entries()) {
+    const label = document.createElement('label'); label.htmlFor = 'test-param-' + index; label.textContent = '{' + name + '}';
+    const input = document.createElement('input'); input.id = label.htmlFor; input.type = 'text'; input.dataset.parameter = name; input.value = previous.get(name) ?? '1'; input.autocomplete = 'off';
+    const field = document.createElement('div'); field.className = 'parameter-field'; field.append(label, input); $('test-fields').append(field);
+  }
+}
+function render() { $('routes').replaceChildren(); $('count').textContent = `(${routes.length})`; if (!routes.length) { const p = document.createElement('p'); p.className = 'hint'; p.textContent = 'No routes yet. Create your first endpoint.'; $('routes').append(p); } for (const route of routes) { const b = document.createElement('button'); b.className = 'route' + (route.name === selected ? ' selected' : ''); const badge = document.createElement('span'); badge.className = 'badge'; badge.textContent = route.method; const name = document.createElement('code'); name.textContent = '/api/' + route.name; b.append(badge, name); b.onclick = () => select(route); $('routes').append(b); } }
+async function load() { routes = await request('/admin/routes'); render(); }
+$('new').onclick = reset;
+$('name').oninput = preview;
+$('format').onclick = () => { try { $('response').value = JSON.stringify(JSON.parse($('response').value), null, 2); message('JSON formatted.'); } catch (e) { message('Invalid JSON: ' + e.message, true); } };
+$('copy-json').onclick = async () => {
+  try {
+    const text = $('response').value;
+    try { await navigator.clipboard.writeText(text); }
+    catch {
+      const input = $('response'); const start = input.selectionStart, end = input.selectionEnd;
+      input.focus(); input.select();
+      const copied = document.execCommand('copy'); input.setSelectionRange(start, end); $('copy-json').focus();
+      if (!copied) throw new Error('Copy unavailable. Select the JSON and copy it manually.');
+    }
+    message('JSON copied.');
+  } catch (e) { message(e.message, true); }
+};
+$('form').onsubmit = async event => { event.preventDefault(); try { const name = $('name').value; if (!selected && routes.some(r => r.name === name)) throw new Error('That route already exists. Select it to edit.'); const response = JSON.parse($('response').value); const saved = await request('/admin/routes/' + encodeURIComponent(name), { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ method: $('method').value, response }) }); await load(); select(saved); message('Saved. Your endpoint is ready.'); } catch (e) { message(e.message, true); } };
+$('delete').onclick = async () => { if (!confirm('Delete /api/' + selected + '?')) return; try { await request('/admin/routes/' + encodeURIComponent(selected), { method: 'DELETE' }); reset(); await load(); message('Route deleted.'); } catch (e) { message(e.message, true); } };
+$('test').onclick = async () => { try { const route = routes.find(r => r.name === selected); const parameters = new Map([...$('test-fields').querySelectorAll('input')].map(input => [input.dataset.parameter, input]));
+    const testPath = selected.split('/').map(segment => {
+      const match = /^\{([a-zA-Z_][a-zA-Z0-9_]*)\}$/.exec(segment);
+      if (!match) return encodeURIComponent(segment);
+      const input = parameters.get(match[1]);
+      const value = input.value;
+      if (!value) { input.focus(); throw new Error('Enter a test value for {' + match[1] + '}.'); }
+      return encodeURIComponent(value);
+    }).join('/');
+    const res = await fetch('/api/' + testPath, { method: route.method === 'ALL' ? 'GET' : route.method }); const text = await res.text(); $('result').textContent = `${res.status} ${res.statusText}\n\n${JSON.stringify(JSON.parse(text), null, 2)}`; $('result').hidden = false; message('Showing the saved response. Save any edits before testing.'); } catch (e) { message(e.message, true); } };
+let logsVisible = false, loggingEnabled = null, loadingLogs = false;
+function showLogs(visible) { logsVisible = visible; $('log-view').hidden = !visible; $('log-toggle').textContent = visible ? 'Hide logs' : 'Show logs'; $('log-toggle').setAttribute('aria-expanded', String(visible)); }
+function displayLogs(data) {
+  if (data.enabled && loggingEnabled !== true) showLogs(true);
+  loggingEnabled = data.enabled;
+  $('log-state').textContent = data.enabled ? 'Recording' : 'Paused';
+  $('log-on').disabled = data.enabled; $('log-pause').disabled = !data.enabled;
+  $('log-on').textContent = data.entries.length ? 'Resume logging' : 'Turn on logging';
+  $('log-message').textContent = data.error ? 'Logging error: ' + data.error : '';
+  const container = $('log-entries');
+  const existing = new Map([...container.querySelectorAll('details')].map(el => [el.dataset.id, el]));
+  const bounds = container.getBoundingClientRect();
+  const anchor = [...existing.values()].find(el => el.getBoundingClientRect().bottom > bounds.top);
+  const anchorTop = anchor?.getBoundingClientRect().top;
+  const scrollTop = container.scrollTop;
+  const wanted = new Set(data.entries.map(entry => entry.id));
+  for (const [id, element] of existing) if (!wanted.has(id)) element.remove();
+  container.querySelector('[data-empty]')?.remove();
+  if (!data.entries.length) {
+    const p = document.createElement('p'); p.className = 'hint'; p.dataset.empty = ''; p.textContent = 'No requests recorded yet.'; container.append(p);
+  }
+  let previous = null;
+  for (const entry of data.entries) {
+    let details = existing.get(entry.id);
+    if (!details) {
+      details = document.createElement('details'); details.dataset.id = entry.id;
+      const summary = document.createElement('summary'); summary.style.cssText = 'padding:12px 0;cursor:pointer;overflow-wrap:anywhere';
+      summary.textContent = `${entry.timestamp} · ${entry.request.method} ${entry.request.url} → ${entry.response.status} · ${entry.durationMs} ms`;
+      const toolbar = document.createElement('div'); toolbar.className = 'log-toolbar';
+      const copy = document.createElement('button'); copy.type = 'button'; copy.className = 'icon-button'; copy.title = 'Copy log entry'; copy.setAttribute('aria-label', 'Copy log entry');
+      copy.innerHTML = $('copy-json').innerHTML;
+      const feedback = document.createElement('span'); feedback.className = 'hint'; feedback.setAttribute('role', 'status');
+      const text = JSON.stringify(entry, null, 2);
+      copy.onclick = async event => {
+        event.preventDefault(); event.stopPropagation();
+        try {
+          try { await navigator.clipboard.writeText(text); }
+          catch {
+            const active = document.activeElement;
+            const input = document.createElement('textarea'); input.value = text; input.style.cssText = 'position:fixed;top:0;left:0;opacity:0;pointer-events:none';
+            document.body.append(input);
+            let copied;
+            try { input.focus({ preventScroll: true }); input.select(); copied = document.execCommand('copy'); }
+            finally { input.remove(); active?.focus({ preventScroll: true }); }
+            if (!copied) throw new Error('Copy unavailable. Select the entry and copy it manually.');
+          }
+          feedback.textContent = 'Log copied.';
+        } catch (e) { feedback.textContent = 'Copy failed'; feedback.title = e.message; }
+      };
+      toolbar.append(feedback, copy);
+      const pre = document.createElement('pre'); pre.textContent = text;
+      summary.append(toolbar);
+      details.append(summary, pre);
+    }
+    // Leave existing nodes in place: this preserves expansion, selection, and inner scroll.
+    const position = previous ? previous.nextElementSibling : container.firstElementChild;
+    if (position !== details) container.insertBefore(details, position);
+    previous = details;
+  }
+  if (anchor?.isConnected) container.scrollTop += anchor.getBoundingClientRect().top - anchorTop;
+  else container.scrollTop = scrollTop;
+}
+async function refreshLogs() { if (loadingLogs) return; loadingLogs = true; try { displayLogs(await request('/admin/logs')); } catch (e) { $('log-message').textContent = e.message; } finally { loadingLogs = false; } }
+async function setLogging(enabled) { try { displayLogs(await request('/admin/logs', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ enabled }) })); if (enabled) showLogs(true); } catch (e) { $('log-message').textContent = e.message; } }
+$('log-on').onclick = () => setLogging(true);
+$('log-pause').onclick = () => setLogging(false);
+$('log-toggle').onclick = () => { showLogs(!logsVisible); if (logsVisible) refreshLogs(); };
+$('log-clear').onclick = async () => { if (!confirm('Permanently clear the saved request logs?')) return; try { displayLogs(await request('/admin/logs', { method: 'DELETE' })); } catch (e) { $('log-message').textContent = e.message; } };
+let tunnelLoaded = false, tunnelBusy = false, tunnelRefreshing = false;
+function tunnelConfig() { return { provider: $('tunnel-provider').value, command: $('tunnel-command').value, args: JSON.parse($('tunnel-args').value), publicUrl: $('tunnel-url').value.trim() }; }
+function displayTunnel(data) {
+  if (!tunnelLoaded) {
+    $('tunnel-provider').value = data.config.provider; $('tunnel-command').value = data.config.command;
+    $('tunnel-args').value = JSON.stringify(data.config.args, null, 2); $('tunnel-url').value = data.config.publicUrl; tunnelLoaded = true;
+  }
+  const active = ['starting', 'running', 'stopping'].includes(data.state);
+  $('tunnel-state').textContent = data.state;
+  $('tunnel-start').disabled = active || tunnelBusy; $('tunnel-stop').disabled = !active || tunnelBusy;
+  $('tunnel-fields').disabled = active || tunnelBusy;
+  $('public-base').textContent = data.publicUrl ? data.publicUrl + '/api/' : 'Start a tunnel or set a public URL';
+  $('tunnel-output').textContent = data.output || 'Not started.';
+  if (data.error) $('tunnel-message').textContent = data.error;
+}
+async function refreshTunnel() { if (tunnelBusy || tunnelRefreshing) return; tunnelRefreshing = true; try { displayTunnel(await request('/admin/tunnel')); } catch (e) { $('tunnel-message').textContent = e.message; } finally { tunnelRefreshing = false; } }
+async function tunnelAction(action) {
+  if (tunnelBusy) return; tunnelBusy = true;
+  $('tunnel-start').disabled = true; $('tunnel-stop').disabled = true; $('tunnel-fields').disabled = true;
+  try {
+    let data;
+    if (action !== 'stop') data = await request('/admin/tunnel', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(tunnelConfig()) });
+    if (action === 'start' || action === 'stop') data = await request('/admin/tunnel/' + action, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' });
+    $('tunnel-message').textContent = action === 'start' ? 'Tool started. Check output for connection status.' : action === 'stop' ? 'Tunnel stopped.' : 'Settings saved.';
+    tunnelBusy = false; displayTunnel(data);
+  } catch (e) { $('tunnel-message').textContent = e.message; }
+  finally { tunnelBusy = false; await refreshTunnel(); }
+}
+$('tunnel-provider').onchange = () => {
+  const provider = $('tunnel-provider').value;
+  if (provider === 'ngrok') { $('tunnel-command').value = 'ngrok'; $('tunnel-args').value = JSON.stringify(['http', '{port}', '--url', '{publicUrl}', '--log', 'stdout', '--log-format', 'json'], null, 2); }
+  if (provider === 'cloudflared') { $('tunnel-command').value = 'cloudflared'; $('tunnel-args').value = JSON.stringify(['tunnel', '--url', '{localUrl}', '--no-autoupdate'], null, 2); $('tunnel-url').value = ''; }
+};
+$('tunnel-save').onclick = () => tunnelAction('save');
+$('tunnel-start').onclick = () => tunnelAction('start');
+$('tunnel-stop').onclick = () => tunnelAction('stop');
+refreshTunnel();
+refreshLogs();
+setInterval(() => { if (!document.hidden) { refreshLogs(); refreshTunnel(); } }, 2000);
+load().catch(e => message(e.message, true));
+</script>
+</body></html>

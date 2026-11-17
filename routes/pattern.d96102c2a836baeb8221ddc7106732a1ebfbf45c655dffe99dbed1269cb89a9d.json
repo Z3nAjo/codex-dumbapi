@@ -1,0 +1,9 @@
+{
+  "name": "coucou/{name}",
+  "method": "GET",
+  "response": {
+    "message": "Hello, world!",
+    "name": "{name}",
+    "success": true
+  }
+}

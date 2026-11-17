@@ -1,0 +1,8 @@
+{
+  "name": "hello",
+  "method": "GET",
+  "response": {
+    "message": "Hello from your dummy API!",
+    "success": true
+  }
+}
